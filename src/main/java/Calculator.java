@@ -4,7 +4,6 @@ import java.util.logging.Logger;
 // added   3 methods
 
 
-
 public class Calculator {
 
     private static final Logger logger = Logger.getLogger(Calculator.class.getName());
