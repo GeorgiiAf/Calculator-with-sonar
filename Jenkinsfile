@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         PATH = "C:\\Program Files\\Git\\bin;${env.PATH}" // путь к Git Bash, если нужно
-        SONARQUBE_SERVER = 'SonarQubeServer'
+        SONAR = 'Sonar'
         SONAR_TOKEN = 'sqa_3fbbf528df6ded7a6f9f6bdb15c7716e23cc1366'
         DOCKERHUB_CREDENTIALS_ID = 'Docker_Hub'
         DOCKERHUB_REPO = 'georgiiafa/calculator-with-sonar'
@@ -41,7 +41,8 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv("${env.SONARQUBE_SERVER}") {
+                withSonarQubeEnv("${env.SONAR}") {
+
                     bat """
                         sonar-scanner ^
                         -Dsonar.projectKey=LectureDemo_SonarQube ^

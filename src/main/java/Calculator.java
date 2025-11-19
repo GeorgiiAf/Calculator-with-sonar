@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-// added  3 methods
+//  added  3 methods
 
 
 public class Calculator {
